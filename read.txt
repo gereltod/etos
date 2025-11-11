@@ -1,0 +1,16 @@
+docker buildx build --platform linux/amd64,linux/arm64 -t gereltod/global --push .
+
+docker buildx build -f prod.Dockerfile --platform linux/amd64,linux/arm64 -t gereltod/global --push .
+
+docker tag backend_ai:v1 gereltod/backend_ai
+docker push gereltod/backend
+
+
+docker buildx build -f prod.Dockerfile --platform linux/amd64,linux/arm64 -t gereltod/backend_ai --push .
+
+
+
+aAsdf@123456#a
+
+
+asdf@1234#
